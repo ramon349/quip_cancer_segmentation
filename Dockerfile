@@ -25,6 +25,7 @@ RUN	cd ${BASE_DIR}/models_cnn && \
         unzip -o models.zip && rm -f models.zip && mv brca_models_cnn/* . && rm -rf brca_models_cnn && \
 	chmod 0755 ${BASE_DIR}/scripts/*
 
+RUN apt-get install -y nodejs
 WORKDIR	${BASE_DIR}/scripts
 
 CMD ["/bin/bash"]

@@ -26,7 +26,6 @@ export PATCH_PATH=${DATA_DIR}/patches
 # model is in ${LYM_NECRO_CNN_MODEL_PATH} 
 export LYM_NECRO_CNN_MODEL_PATH="${BASE_DIR}/models_cnn/"
 echo "My model path is: ${LYM_NECRO_CNN_MODEL_PATH}"
-CNN_MODEL="incpetionv4"
 echo "CNN_MODEL is: ${CNN_MODEL}"
 if [[ -z "${CNN_MODEL}" ]]; then
 	echo "----WARNING: INPUT WAS BLANK DEFAULTING TO RESNET---"
