@@ -9,3 +9,8 @@ maybe i should addd extra notes
 
 THings to do 
     in the run docker container 
+
+
+
+WHAT SHOULD THE CLOUDYPIPELINE INPUTS BE 
+1 input should be the variable CNN_MODEL: here we define resnet=34,inceptionv4,vgg16, 

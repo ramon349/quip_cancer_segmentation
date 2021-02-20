@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Variables
 DEFAULT_OBJ=20
 DEFAULT_MPP=0.5
@@ -25,8 +24,12 @@ export SVS_INPUT_PATH=${DATA_DIR}/svs
 export PATCH_PATH=${DATA_DIR}/patches
 
 # model is in ${LYM_NECRO_CNN_MODEL_PATH} 
-export LYM_NECRO_CNN_MODEL_PATH=${BASE_DIR}/models_cnn
+export LYM_NECRO_CNN_MODEL_PATH="${BASE_DIR}/models_cnn/"
+echo "My model path is: ${LYM_NECRO_CNN_MODEL_PATH}"
+CNN_MODEL="incpetionv4"
+echo "CNN_MODEL is: ${CNN_MODEL}"
 if [[ -z "${CNN_MODEL}" ]]; then
+	echo "----WARNING: INPUT WAS BLANK DEFAULTING TO RESNET---"
 	MODEL="RESNET_34_cancer_350px_lr_1e-2_decay_5_jitter_val6slides_harder_pretrained_none_1117_0044_0.8715164676076728_17.t7"
 else
 	if [ "${CNN_MODEL}" == "inceptionv4" ]; then
@@ -39,6 +42,7 @@ else
 		MODEL="RESNET_34_cancer_350px_lr_1e-2_decay_5_jitter_val6slides_harder_pretrained_none_1117_0044_0.8715164676076728_17.t7"
 	fi     
 fi
+echo "Model that will be loaded is  ${MODEL}"
 export MODEL
 
 # Training folders

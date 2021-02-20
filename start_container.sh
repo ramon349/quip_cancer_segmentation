@@ -19,6 +19,9 @@ cleanup
 docker run -d --name ${container_name} \
 --shm-size=8G \
 -v `pwd`/data/:/quip_app/quip_cancer_segmentation/data/ \
+-v `pwd`/scripts:/quip_app/quip_cancer_segmentation/scripts/ \
+-v `pwd`/conf:/quip_app/quip_cancer_segmentation/conf/ \
+-v `pwd`/patch_ectraction_cancer_40X:/quip_app/quip_cancer_segmentation/patch_ectraction_cancer_40X/ \
 -t ${public_docker_host}/${GOOGLE_PROJECT_ID}/${image_name}:${image_tag} 
 sleep 2
 docker ps
