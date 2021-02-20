@@ -15,7 +15,7 @@ RUN	apt-get -y update && \
 	pip install openslide-python
 
 ENV     BASE_DIR="/quip_app/quip_cancer_segmentation"
-ENV     PATH="./":$PATH
+ENV     PATH="./:${PATH}" 
 
 COPY	. ${BASE_DIR}/.
 

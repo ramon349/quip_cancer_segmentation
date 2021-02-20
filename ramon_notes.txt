@@ -1,0 +1,11 @@
+1. We need to be working on the develop branch wich is the laterst 
+    a.  main branch has isuse where conda needs to be updated 
+in
+
+
+maybe i should addd extra notes 
+
+
+
+THings to do 
+    in the run docker container 
