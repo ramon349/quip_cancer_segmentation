@@ -19,6 +19,6 @@ do
     rm ./meta*  
     cd "${SCRIPTDIR}" 
     echo "Working on ${temp_path}"
-    node process_json.js "${temp_path}" "${output_path}"
+    nodejs process_json.js "${temp_path}" "${output_path}"
 done 
 echo "Finished borb conversion"

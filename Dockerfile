@@ -14,6 +14,9 @@ RUN	apt-get -y update && \
 	conda install --yes -c conda-forge opencv && \
 	pip install openslide-python
 
+RUN curl -sL https://deb.nodesource.com/setup_15.x  | bash -
+RUN apt-get -y install nodejs
+
 ENV     BASE_DIR="/quip_app/quip_cancer_segmentation"
 ENV     PATH="./:${PATH}" 
 
@@ -25,7 +28,6 @@ RUN	cd ${BASE_DIR}/models_cnn && \
         unzip -o models.zip && rm -f models.zip && mv brca_models_cnn/* . && rm -rf brca_models_cnn && \
 	chmod 0755 ${BASE_DIR}/scripts/*
 
-RUN apt-get install -y nodejs
 WORKDIR	${BASE_DIR}/scripts
 
 CMD ["/bin/bash"]
